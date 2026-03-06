@@ -13,6 +13,18 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(express.json());
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.status(200).json({ 
+    message: 'Identity Reconciliation Service',
+    version: '1.0.0',
+    endpoints: {
+      identify: 'POST /identify',
+      health: 'GET /health'
+    }
+  });
+});
+
 // Routes
 app.use('/', identifyRoutes);
 
