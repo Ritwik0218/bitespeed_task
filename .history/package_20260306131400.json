@@ -12,9 +12,6 @@
     "prisma:reset": "prisma migrate reset",
     "prisma:studio": "prisma studio"
   },
-  "engines": {
-    "node": ">=18"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
